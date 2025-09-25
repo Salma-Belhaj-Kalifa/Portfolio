@@ -1,0 +1,112 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import myImg from "../../Assets/salma.jpg";
+import Tilt from "react-parallax-tilt";
+import { FaFacebookF } from "react-icons/fa"; // Add this import at the top
+
+import {
+  AiFillGithub,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+
+function Home2() {
+  return (
+    <Container fluid className="home-about-section" id="about">
+      <Container>
+        <Row>
+          <Col md={8} className="home-about-description">
+            <h1 style={{ fontSize: "2.6em" }}>
+              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            </h1>
+            <p className="home-about-body">
+              I am a passionate software engineering student dedicated to creating
+              innovative and impactful solutions. I specialize in web development
+              and am particularly interested in integrating <b className="purple">AI</b> technologies
+              to build smarter and more dynamic applications.
+              <br />
+              <br />
+              I am proficient in languages such as{" "}
+              <i>
+                <b className="purple">JavaScript, C++, Java and Python</b>
+              </i>
+              , and I enjoy designing interactive and user-friendly web platforms.
+              <br />
+              <br />
+              My main areas of interest include{" "}
+              <i>
+                <b className="purple">Web Development, UI/UX, and AI integration</b>
+              </i>
+              , as well as exploring emerging technologies that enhance user experiences.
+              <br />
+              <br />
+              Whenever possible, I apply my expertise with <b className="purple">Node.js</b> and modern
+              JavaScript frameworks like{" "}
+              <i>
+                <b className="purple">React.js and Next.js</b>
+              </i>
+              , building scalable and efficient web solutions.
+            </p>
+          </Col>
+          <Col md={4} className="myAvtar">
+            <Tilt>
+              <img src={myImg} className="img-fluid" alt="avatar" />
+            </Tilt>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="purple">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/Salma-Belhaj-Kalifa"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.facebook.com/salma.belhaj.kalifa"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaFacebookF />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.linkedin.com/in/salma-belhaj-kalifa-b3b42623b/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.instagram.com/salmaa_bhk/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiFillInstagram />
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+
+export default Home2;
