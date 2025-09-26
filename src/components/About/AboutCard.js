@@ -14,7 +14,7 @@ function AboutCard() {
           </p>
           
           <p style={{ textAlign: "justify" }}>
-            I am actively involved in NATEG ISSATSO, where I contribute to organizing events, workshops, and student activities. Being part of a vibrant community has helped me develop leadership, teamwork, and communication skills that complement my technical expertise.
+            I am actively involved in NATEG ISSATSO club, where I contribute to organizing events, workshops, and student activities. Being part of a vibrant community has helped me develop leadership, teamwork, and communication skills that complement my technical expertise.
           </p>
 
           <p style={{ textAlign: "justify" }}>
