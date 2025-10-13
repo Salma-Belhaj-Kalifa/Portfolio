@@ -1,0 +1,116 @@
+/* Education Timeline */
+.education-timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 0;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #6f42c1;
+  transform: translateX(-50%);
+}
+
+.education-item {
+  position: relative;
+  width: 45%;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  background: transparent; /* Remove white background */
+  border-radius: 10px;
+  /* Optional subtle border for separation */
+  border-left: 2px solid #6f42c1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  color: #fff; /* Text color, adjust depending on card background */
+}
+
+.education-item.left {
+  left: 0;
+  transform-origin: left;
+}
+
+.education-item.right {
+  left: 55%;
+  transform-origin: right;
+}
+
+.education-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background-color: #6f42c1;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.education-item.left::after {
+  right: -8px;
+}
+
+.education-item.right::after {
+  left: -8px;
+}
+
+.education-badge {
+  display: inline-block;
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.education-year {
+  font-weight: bold;
+  color: #6f42c1;
+  margin-bottom: 8px;
+}
+
+.education-details p {
+  margin: 0;
+  color: #f8f1f1;
+  font-size: 0.95rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.education-item.left {
+  animation-delay: 0.2s;
+}
+
+.education-item.right {
+  animation-delay: 0.4s;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .education-item,
+  .education-item.right,
+  .education-item.left {
+    width: 90%;
+    left: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .education-timeline::before {
+    left: 20px;
+  }
+  .education-item::after {
+    left: 8px !important;
+  }
+}

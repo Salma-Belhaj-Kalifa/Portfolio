@@ -13,7 +13,9 @@ function Type() {
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed:40,
+        delay: 20, // <-- decrease this value for faster typing (default ~50-100)
+
       }}
     />
   );

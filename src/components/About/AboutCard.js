@@ -1,28 +1,14 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
-import { useSpring, animated } from "react-spring";
+import "./AboutCard.css";
 
 function AboutCard() {
-  // Animation for education items
-  const fadeInUp = useSpring({
-    from: { opacity: 0, transform: "translateY(20px)" },
-    to: { opacity: 1, transform: "translateY(0px)" },
-    delay: 200,
-    config: { tension: 200, friction: 20 },
-  });
-
-  const fadeInUp2 = useSpring({
-    from: { opacity: 0, transform: "translateY(20px)" },
-    to: { opacity: 1, transform: "translateY(0px)" },
-    delay: 400,
-    config: { tension: 200, friction: 20 },
-  });
-
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
+          {/* Intro Paragraphs */}
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Salma Ben Haj Khalifa</span> from{" "}
             <span className="purple">Sousse, Tunisia.</span>
@@ -38,6 +24,7 @@ function AboutCard() {
             Beyond coding, I love exploring new technologies, writing tech blogs, learning about UI/UX design, and discovering different cultures through travel. These experiences inspire me to create solutions that are not only functional but also intelligent, engaging, and meaningful.
           </p>
 
+          {/* Skills List */}
           <ul>
             <li className="about-activity">
               <ImPointRight /> Web & UI/UX Development
@@ -56,21 +43,25 @@ function AboutCard() {
           {/* Education Section */}
           <h4 className="purple mt-4">🎓 Education</h4>
 
-          <animated.div style={fadeInUp} className="education-item">
-            <p>
-              <strong>Cycle Pré-ingénieur – ISSAT Sousse</strong> <br />
-              2020 - 2022 <br />
-              Focus: Mathématiques, Physique, Informatique de base
-            </p>
-          </animated.div>
+          <div className="education-timeline">
+            <div className="education-item left">
+              <div className="education-badge">Engineering</div>
+              <div className="education-year">2022 - 2026</div>
+              <div className="education-details">
+                <strong>Software Engineering Cycle – ISSAT Sousse</strong>
+                <p>Focus: Web Development, AI, Databases, Software Architecture</p>
+              </div>
+            </div>
 
-          <animated.div style={fadeInUp2} className="education-item">
-            <p>
-              <strong>Cycle Ingénieur – Génie Logiciel, ISSAT Sousse</strong> <br />
-              2022 - 2025 <br />
-              Focus: Développement Web, IA, Bases de données, Architecture logicielle
-            </p>
-          </animated.div>
+            <div className="education-item right">
+              <div className="education-badge">Pre-Engineering</div>
+              <div className="education-year">2020 - 2022</div>
+              <div className="education-details">
+                <strong>Pre-Engineering Cycle – ISSAT Sousse</strong>
+                <p>Focus: Mathematics, Physics, Basic Computer Science</p>
+              </div>
+            </div>
+          </div>
         </blockquote>
       </Card.Body>
     </Card>
