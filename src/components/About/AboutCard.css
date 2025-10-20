@@ -9,7 +9,7 @@
 
 /* Education Card */
 .education-card {
-  background: linear-gradient(135deg, #1e1e2f 0%, #2a2a3e 100%);
+  background: linear-gradient(135deg, #101019 0%, #2a2a3e 100%);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
@@ -19,16 +19,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #fff;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px) scale(0.95);
   animation: fadeInUp 0.8s forwards;
 }
 
 .education-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.6);
 }
 
-/* Badge */
+/* Badge with pulse effect */
 .education-badge {
   font-weight: bold;
   display: inline-block;
@@ -38,12 +38,14 @@
   border-radius: 50px;
   font-size: 1rem;
   margin-bottom: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
+  box-shadow: 0 2px 12px rgba(111,66,193,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulseBadge 2s infinite;
 }
 
-.education-item:hover .education-badge {
-  transform: scale(1.1);
+.education-card:hover .education-badge {
+  transform: scale(1.15);
+  box-shadow: 0 4px 20px rgba(111,66,193,0.8);
 }
 
 /* Year */
@@ -61,33 +63,33 @@
   color: #ccc;
 }
 
-/* Animation */
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Card Entry Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-/* Make timeline responsive */
-@media screen and (max-width: 768px) {
-  .education-item,
-  .education-item.right,
-  .education-item.left {
-    width: 90%;
-    left: 5% !important;
+/* Badge Pulse */
+@keyframes pulseBadge {
+  0%, 100% {
+    box-shadow: 0 2px 12px rgba(111,66,193,0.6);
   }
+  50% {
+    box-shadow: 0 2px 20px rgba(111,66,193,1);
+  }
+}
 
-  .education-item::after,
-  .education-item.right::after {
-    left: 50%;
-    transform: translateX(-50%);
+/* Staggered animation */
+.education-card:nth-child(1) { animation-delay: 0.2s; }
+.education-card:nth-child(2) { animation-delay: 0.5s; }
+.education-card:nth-child(3) { animation-delay: 0.8s; }
+.education-card:nth-child(4) { animation-delay: 1.1s; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .education-card {
+    width: 95%;
   }
 }
