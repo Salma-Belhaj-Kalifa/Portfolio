@@ -22,20 +22,23 @@ function Home2() {
             <p className="home-about-body">
               I am a passionate software engineering student dedicated to creating
               innovative and impactful solutions. I specialize in web development
-              and am particularly interested in integrating <b className="purple">AI</b> technologies
-              to build smarter and more dynamic applications.
+              and am particularly interested in integrating <b className="purple">AI</b> and 
+              <b className="purple"> Computer Vision</b> technologies to build smarter, 
+              dynamic, and interactive applications.
               <br />
               <br />
               I am proficient in languages such as{" "}
               <i>
-                <b className="purple">JavaScript, C++, Java and Python</b>
+                <b className="purple">JavaScript, C++, Java, and Python</b>
               </i>
               , and I enjoy designing interactive and user-friendly web platforms.
               <br />
               <br />
               My main areas of interest include{" "}
               <i>
-                <b className="purple">Web Development, UI/UX, and AI integration</b>
+                <b className="purple">
+                  Web Development, UI/UX, AI Integration, Machine Learning, and Computer Vision
+                </b>
               </i>
               , as well as exploring emerging technologies that enhance user experiences.
               <br />
@@ -45,9 +48,10 @@ function Home2() {
               <i>
                 <b className="purple">React.js and Next.js</b>
               </i>
-              , building scalable and efficient web solutions.
+              , building scalable, intelligent, and efficient web solutions.
             </p>
           </Col>
+
           <Col md={4} className="myAvtar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
