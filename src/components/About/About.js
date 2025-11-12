@@ -11,15 +11,15 @@ import "./AboutCard.css";
 function About() {
   const educationData = [
     {
-      badge: "Engineering",
-      year: "2022 - 2026",
+      badge: "Engineering Cycle",
+      year: "2023 - 2026",
       title: "Software Engineering Cycle – ISSAT Sousse",
       focus:
         "Focus: Web Development, AI, Machine Learning, Computer Vision, Databases, Software Architecture",
     },
     {
-      badge: "Pre-Engineering",
-      year: "2020 - 2022",
+      badge: "Pre-Engineering Cycle",
+      year: "2021 - 2023",
       title: "Pre-Engineering Cycle – ISSAT Sousse",
       focus: "Focus: Mathematics, Physics, Basic Computer Science",
     },

@@ -6,8 +6,9 @@ import leaf from "../../Assets/Projects/dardart.PNG";
 import editor from "../../Assets/Projects/issatso.PNG";
 import chatify from "../../Assets/Projects/interview.PNG";
 import bitsOfCode from "../../Assets/Projects/Posti.PNG";
-import hand from "../../Assets/Projects/hand.PNG"; 
 import volume from "../../Assets/Projects/volume.PNG"; 
+import color from "../../Assets/Projects/color.PNG"; 
+
 
 function Projects() {
   const imgStyle = { height: "200px", width: "cover" }; // uniform image size
@@ -78,7 +79,7 @@ Key aspects: Java Swing, WebSockets, MySQL, guesthouse management`}
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={hand}
+              imgPath={color}
               isBlog={false}
               title="Color Detection"
               description={`A real-time computer vision application that detects and identifies colors using a webcam feed. 
