@@ -25,8 +25,8 @@ const styles = `
   background:rgba(199,112,240,.12);border:1px solid rgba(199,112,240,.3);
 }
 .hm-name{
-  margin:0 0 6px;text-align:left;font-size:clamp(2.2rem,5vw,3.6rem);
-  font-weight:700;line-height:1.15;color:#fff;
+  margin:0 0 6px;text-align:left;font-size:clamp(2rem,5vw,3rem);
+  font-weight:400;line-height:1;color:#fff;
 }
 .hm-name span{color:#c770f0}
 .hm-type{padding:18px 0 8px;text-align:left}
@@ -50,7 +50,7 @@ const styles = `
   background:radial-gradient(circle,rgba(199,112,240,.4),transparent 68%);
   filter:blur(34px);
 }
-.hm-pic img{position:relative;max-width:100%;max-height:400px;height:auto;object-fit:contain}
+.hm-pic img{position:relative;max-width:90%;max-height:350px;height:auto;object-fit:contain}
 
 @media (max-width:767px){
   .hm-hero{min-height:auto;text-align:center}
